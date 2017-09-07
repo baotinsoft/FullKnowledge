@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Stock" Class="StockDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=dbmoc;Initial Catalog=Stock;Persist Security Info=True;User ID=sa" SettingsObjectName="StockPredict.Properties.Settings" SettingsPropertyName="StockConnectionString4" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TempPriceList" Member="TempPriceLists">
+    <Type Name="TempPriceList">
+      <Column Name="StockId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Stock" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="ChangePercent" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CloseDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OpenPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="HighPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LowPrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ClosePrice" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Volume" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TempStockListbyBranch" Member="TempStockListbyBranches">
+    <Type Name="TempStockListbyBranch">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Stock" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Parameter" Member="Parameters">
+    <Type Name="Parameter">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Parameter" Member="Parameter1" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="VNParameter" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NChar(2000)" CanBeNull="true" />
+      <Column Name="FormatMask" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Column Name="StockPos" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="BranchPos" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TempBranchFinanceList" Member="TempBranchFinanceLists">
+    <Type Name="TempBranchFinanceList">
+      <Column Name="Branch" Type="System.String" DbType="NChar(500)" CanBeNull="true" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BranchId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Term" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EPSbasic" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ZSCORE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ROA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ROE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CurrentRatio" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="QuickRatio" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AssetTurnover" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="InventoryDays" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AverageCollectionPeriod" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CashRevenue" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FixedAssetTurnover" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TargetWorkingCapitalRevenue" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TargetnoncashWorkingCapitalRevenue" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TargetlongtermDebtRevenue" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DebtRatio" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AbilitypayInterest" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ROC" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ROCE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NetMargins" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="GrossMargins" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EBITSALES" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="RevenueGrowth" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="GrowthTargetsNetProfit" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="GrowthTargetsNOPAT" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TargetPATEquity" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TargetNOPATTotalAssets" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TagetPATTotalAssets" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TargetRevenueTotalAssets" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AverageTotalAssets" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalCapitalOwnersAverage" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TempStockFinanceList" Member="TempStockFinanceLists">
+    <Type Name="TempStockFinanceList">
+      <Column Name="Stock" Type="System.String" DbType="NChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StockId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Term" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Revenue" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CostGoodsSold" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="GrossProfit" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="BusinessProfit" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FinanceProfit" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="InterestExpenses" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PBTI" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Tax" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NetIncome" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ProfitShareholders" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalAssets" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Assets" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ShortFinancialInvestments" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Inventory" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FixedAssets" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LongAssets" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ShortDebt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LongDebt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="OwnerEquity" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ProfitsNotDistributed" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PB" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceBooks" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EPSBasic" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EPSAdj" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Beta" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ZScore" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DividendRate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ROA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ROE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="GrossProfitRate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PBTRate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PATRate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CurrentRatio" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="QuickRatio" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EquityLoans" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LongDebtEquity" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="InventoryTurnaround" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AssetTurnover" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="InterestCoverageRatio" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PEBasic" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PEAdj" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PBPricePerBook" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="InventoryDays" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.FinanceValue" Member="FinanceValues">
+    <Type Name="FinanceValue">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StockId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Term" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Revenue" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CostGoodsSold" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="GrossProfit" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="BusinessProfit" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FinanceProfit" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="InterestExpenses" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PBTI" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Tax" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NetIncome" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ProfitShareholders" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalAssets" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Assets" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ShortFinancialInvestments" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Inventory" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FixedAssets" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LongAssets" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LongFinanceInvest" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ShortDebt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LongDebt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="OwnerEquity" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ProfitsNotDistributed" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PB" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceBooks" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EPSBasic" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EPSAdj" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Beta" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ZScore" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DividendRate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ROA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ROE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="GrossProfitRate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PBTRate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PATRate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CurrentRatio" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="QuickRatio" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EquityLoans" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LongDebtEquity" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="InventoryTurnaround" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AssetTurnover" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="InterestCoverageRatio" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PEBasic" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PEAdj" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PBPricePerBook" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="InventoryDays" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Definition" Member="Definitions">
+    <Type Name="Definition">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CodeNum" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Definition" Member="Definition1" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DefGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Bit" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Num1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Num2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Definition_Stock" Member="Stocks" ThisKey="Id" OtherKey="MarketId" Type="Stock" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ParameterValue" Member="ParameterValues">
+    <Type Name="ParameterValue">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="StockId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParameterId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Value" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AffectDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ParameterGroup" Member="ParameterGroups">
+    <Type Name="ParameterGroup">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ParameterGroup" Member="ParameterGroup1" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ParameterDefault" Member="ParameterDefaults">
+    <Type Name="ParameterDefault">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DefaultParam" Type="System.String" DbType="NChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Price" Member="Prices">
+    <Type Name="Price">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StockId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PriceDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OpenPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="HighPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="LowPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ClosePrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Volume" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Stock_Price" Member="Stock" ThisKey="StockId" OtherKey="Id" Type="Stock" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StockMonitor" Member="StockMonitors">
+    <Type Name="StockMonitor">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StockId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SourceId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Reason" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vStockMonitor" Member="vStockMonitors">
+    <Type Name="vStockMonitor">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StockId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Stock" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SourceId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Reason" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Definition" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vStockFinance" Member="vStockFinances">
+    <Type Name="vStockFinance">
+      <Column Name="Code" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StockId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Term" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Revenue" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CostGoodsSold" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="GrossProfit" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="BusinessProfit" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FinanceProfit" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="InterestExpenses" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PBTI" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Tax" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="NetIncome" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ProfitShareholders" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="TotalAssets" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Assets" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ShortFinancialInvestments" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Inventory" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="FixedAssets" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LongAssets" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LongFinanceInvest" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ShortDebt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LongDebt" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="OwnerEquity" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ProfitsNotDistributed" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PB" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PriceBooks" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EPSBasic" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EPSAdj" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Beta" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ZScore" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="DividendRate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ROA" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="ROE" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="GrossProfitRate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PBTRate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PATRate" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="CurrentRatio" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="QuickRatio" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="EquityLoans" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="LongDebtEquity" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="InventoryTurnaround" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="AssetTurnover" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="InterestCoverageRatio" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PEBasic" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PEAdj" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="PBPricePerBook" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="InventoryDays" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="UpdatedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vBranchFinance" Member="vBranchFinances">
+    <Type Name="vBranchFinance">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BranchGroup" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="GroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Branch" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PB" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="EPS" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Capitalization" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Income" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Property" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PAT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ROA" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ROE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MarginProfit" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PBT" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="DebtPerProperty" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Short" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="FPTS" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Term" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Portfolio" Member="Portfolios">
+    <Type Name="Portfolio">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StockId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BuyPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="BuyRealPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SalePrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SaleRealPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="BuyRealDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SaleRealDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vPortfolio" Member="vPortfolios">
+    <Type Name="vPortfolio">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StockId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BuyPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="BuyRealPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SalePrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SaleRealPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="BuyRealDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SaleRealDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Stock" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vStockInfo" Member="vStockInfos">
+    <Type Name="vStockInfo">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StockId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(600)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.StockHolder" Member="StockHolders">
+    <Type Name="StockHolder">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StockId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StockHolderName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AffectedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vStockHolder" Member="vStockHolders">
+    <Type Name="vStockHolder">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StockId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="StockHolderName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Quantity" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="HolderPercent" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="AffectedDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CurrentStock" Type="System.Decimal" DbType="Decimal(18,0)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Branch" Member="Branches">
+    <Type Name="Branch">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Branch" Member="Branch1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ChangeNumber" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ChangePercent" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="EPS" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ROA" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ROE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="AvgPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="BookValue" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PB" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Beta" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TotalStock" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ForeignStock" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ForeignPercent" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Capitalization" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FiveBasicElementId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Stock" Member="Stocks">
+    <Type Name="Stock">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Stock" Member="Stock1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="BranchId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MarketId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ChangeNumber" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ChangePercent" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="EPS" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ROA" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ROE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="BookValue" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PB" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Beta" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TotalStock" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ForeignStock" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ForeignPercent" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Capitalization" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="Stock_Price" Member="Prices" ThisKey="Id" OtherKey="StockId" Type="Price" />
+      <Association Name="Definition_Stock" Member="Definition" ThisKey="MarketId" OtherKey="Id" Type="Definition" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vPrice" Member="vPrices">
+    <Type Name="vPrice">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StockId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="PriceDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OpenPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="HighPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="LowPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ClosePrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Volume" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BranchId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MarketId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Market" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BranchGroup" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="EnFiveBasicElement" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="VnFiveBasicElement" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="FiveBasicElementId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.ReportChangePrice" Method="ReportChangePrice">
+    <Parameter Name="StockFromId" Parameter="stockFromId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="StockToId" Parameter="stockToId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DateFrom" Parameter="dateFrom" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="DateTo" Parameter="dateTo" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetPriceList" Method="GetPriceList">
+    <Parameter Name="sStockList" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="dtFrom" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="dtTo" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetStockListbyBranch" Method="GetStockListbyBranch">
+    <Parameter Name="sBranchList" Type="System.String" DbType="VarChar(500)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetBranchFinanceList" Method="GetBranchFinanceList">
+    <Parameter Name="sStockList" Type="System.String" DbType="VarChar(500)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetStockFinanceList" Method="GetStockFinanceList">
+    <Parameter Name="sStockList" Type="System.String" DbType="VarChar(500)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.spFinance" Method="spFinance">
+    <Parameter Name="fromLst" Type="System.Int32" DbType="Int" />
+    <Parameter Name="lst" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.fPrice" Method="fPrice" IsComposable="true">
+    <Parameter Name="fromId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="toId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="from" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="to" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="changedPercent" Type="System.Int32" DbType="Int" />
+    <Parameter Name="all" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="avgVolume" Type="System.Int32" DbType="Int" />
+    <Parameter Name="minPrice" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fiveBasicElement" Type="System.Int32" DbType="Int" />
+    <ElementType Name="fPriceResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Market" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Volume" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaxPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MinPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ChangedPercent" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="OpenPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ClosePrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="HighPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="LowPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.fChangedPrice" Method="fChangedPrice" IsComposable="true">
+    <Parameter Name="from" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="to" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="all" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="avgVolume" Type="System.Int32" DbType="Int" />
+    <Parameter Name="top" Type="System.Int32" DbType="Int" />
+    <Parameter Name="fiveBasicElement" Type="System.Int32" DbType="Int" />
+    <ElementType Name="fChangedPriceResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Market" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Volume" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MinClosePrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="MaxClosePrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="LastClosePrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="IncreasePercent" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="DecreasePercent" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

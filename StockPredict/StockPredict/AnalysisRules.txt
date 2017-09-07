@@ -1,0 +1,6 @@
+Dong dau tien: so luat; cac dong sau: cac luat; dinh dang luat: dieu kien: ket qua; C(Close);O(Open),L(Low), High(H); day gia tri tao nen la tu 0-9: 9 la gia tri lich su moi nhat; chi su dung:>&:+-*/
+7
+1. PatternDarkCloudCover
+C8>O8&O9>C9&O9>H8&C8-O8/2>C9:2
+2. PatternPiercingLine
+O8>C8&C9>O9&L8>O9&C9>O8-C8/2:1

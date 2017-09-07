@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 16.625, 10.5" name="HistoricalDB">
+  <DataContextMoniker Name="/HistoricalDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="127edc69-56af-4e51-9523-4f60ac372d31" absoluteBounds="0.75, 0.75, 2, 5.4246240234375">
+      <DataClassMoniker Name="/HistoricalDBDataContext/VAvgMonthGold" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1238e1a4-5e4e-4d07-b2dc-de68f9480e55" absoluteBounds="0.765, 1.21, 1.9700000000000002, 4.8646240234375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c25cd2ee-1297-4f0e-9d5b-4d70646382e1" absoluteBounds="3.75, 3.75, 2, 5.6169254557291666">
+      <DataClassMoniker Name="/HistoricalDBDataContext/VAvgMonthYearGold" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ce6abf0d-b4da-4428-94ec-9269bbe55f05" absoluteBounds="3.765, 4.21, 1.9700000000000002, 5.0569254557291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6d769047-ca9c-44db-a43e-5b4dd9fd3692" absoluteBounds="6.75, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/HistoricalDBDataContext/VAvgMonthYearSJC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f08cb0e7-9ca9-40fd-a20d-ad3637cab0d3" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b115513a-c473-4086-b213-a9c824478fcb" absoluteBounds="9.75, 7.5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/HistoricalDBDataContext/Definition" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eab3d0aa-d128-4c81-8950-3a1b5e96b6d9" absoluteBounds="9.765, 7.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d2aafd71-9057-486a-ba47-27390d4fdc5d" absoluteBounds="8.75, 5.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/HistoricalDBDataContext/EUR" />
+      <nestedChildShapes>
+        <elementListCompartment Id="95f54e49-9449-43d4-8922-0292c90e73c7" absoluteBounds="8.765, 6.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="50ef2b0a-0975-457a-bf44-f1efd82e93ab" absoluteBounds="6.5, 6.25, 2, 1.9631982421875">
+      <DataClassMoniker Name="/HistoricalDBDataContext/Forex" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a0f4f139-b9b4-4301-b57e-3b030168b220" absoluteBounds="6.515, 6.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="54d48404-1593-4558-bc68-00a807b03107" absoluteBounds="10.375, 3.5, 2, 5.2323225911458326">
+      <DataClassMoniker Name="/HistoricalDBDataContext/Gold" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4ece4eb0-91e6-4738-9b3b-d676c9720d96" absoluteBounds="10.39, 3.96, 1.9700000000000002, 4.672322591145833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="911da052-7be6-4065-9537-ce30621770b9" absoluteBounds="14.375, 5.125, 2, 1.9631982421875">
+      <DataClassMoniker Name="/HistoricalDBDataContext/SJCDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0c2ee083-78bd-4456-816f-d85cb51926ef" absoluteBounds="14.39, 5.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="448bc150-502b-437b-a779-6c3eace81bdc" absoluteBounds="7.375, 4.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HistoricalDBDataContext/SJC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3b66691e-4346-47c0-b90c-03e62cf8eb19" absoluteBounds="7.39, 5.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="53280922-f5ec-445d-a692-0d9bc5424278" absoluteBounds="2.375, 7.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/HistoricalDBDataContext/USD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f71834bc-42ed-403e-b0ef-c43102fe336e" absoluteBounds="2.39, 8.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d80acaae-c278-4912-b846-7f77fab5d955" absoluteBounds="4.5, 1.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HistoricalDBDataContext/VAvgMonthSJC" />
+      <nestedChildShapes>
+        <elementListCompartment Id="63dece88-5408-495d-a47e-95db3efde916" absoluteBounds="4.515, 2.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

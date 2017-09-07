@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DBSync" Class="DBSyncDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=DBSync;Integrated Security=True" SettingsObjectName="DBSynchronization.Properties.Settings" SettingsPropertyName="DBSyncConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.DB" Member="DBs">
+    <Type Name="DB">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DBSource" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DBDest" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ServerId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UrlDetail" Member="UrlDetails">
+    <Type Name="UrlDetail">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UrlId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SearchSkip" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="SearchBegin" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="SearchEnd" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="FieldNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FieldOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DataType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DefGroup" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Definition" Member="Definitions">
+    <Type Name="Definition">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CodeNum" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Definition" Member="Definition1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Bit" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Num1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Num2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DefinitionGroup" Member="DefinitionGroups">
+    <Type Name="DefinitionGroup">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Group]" Member="Group" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="First" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Last" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.MergeTable" Member="MergeTables">
+    <Type Name="MergeTable">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TableName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="MergeQuery" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DatabaseId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ConnectionString" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TableRequest" Member="TableRequests">
+    <Type Name="TableRequest">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DBName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TableName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsDaily" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Url" Member="Urls">
+    <Type Name="Url">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TableId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Url" Member="Url1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ValueFrom" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ValueTo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AlphaFrom" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="AlphaTo" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="Loop" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Google" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Search" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Param" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="FromDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="StorePath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="HttpPost" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ContentTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ServerName" Member="ServerNames">
+    <Type Name="ServerName">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ServerSource" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ServerDest" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="CreatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

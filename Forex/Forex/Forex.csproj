@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45BB8FFB-7F78-45B0-BCAC-D123A0F6CB7D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Forex</RootNamespace>
+    <AssemblyName>Forex</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="InputControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\InputControl.dll</HintPath>
+    </Reference>
+    <Reference Include="PagingGridControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\PagingGridControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WindowFramework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBContext\DBHistorical.cs" />
+    <Compile Include="frmCompareGoldVN_World.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCompareGoldVN_World.Designer.cs">
+      <DependentUpon>frmCompareGoldVN_World.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGold.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGold.Designer.cs">
+      <DependentUpon>frmGold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNews.Designer.cs">
+      <DependentUpon>frmNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewsDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewsDisplay.Designer.cs">
+      <DependentUpon>frmNewsDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRate.Designer.cs">
+      <DependentUpon>frmRate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRule.Designer.cs">
+      <DependentUpon>frmRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRules_Gold.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRules_Gold.Designer.cs">
+      <DependentUpon>frmRules_Gold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSJC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSJC.Designer.cs">
+      <DependentUpon>frmSJC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBContext\HistoricalDB.cs">
+      <DependentUpon>HistoricalDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DBContext\HistoricalDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HistoricalDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmCompareGoldVN_World.resx">
+      <DependentUpon>frmCompareGoldVN_World.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGold.resx">
+      <DependentUpon>frmGold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNews.resx">
+      <DependentUpon>frmNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewsDisplay.resx">
+      <DependentUpon>frmNewsDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRate.resx">
+      <DependentUpon>frmRate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRule.resx">
+      <DependentUpon>frmRule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRules_Gold.resx">
+      <DependentUpon>frmRules_Gold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSJC.resx">
+      <DependentUpon>frmSJC.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DBContext\HistoricalDB.dbml.layout">
+      <DependentUpon>HistoricalDB.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DBContext\HistoricalDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>HistoricalDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DBContext\HistoricalDB.dbml.views">
+      <DependentUpon>HistoricalDB.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

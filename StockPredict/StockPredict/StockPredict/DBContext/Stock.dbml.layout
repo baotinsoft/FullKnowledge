@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 20.875, 26.625" name="Stock">
+  <DataContextMoniker Name="/StockDataContext" />
+  <nestedChildShapes>
+    <classShape Id="83de9e40-46f4-4b55-8bc6-b8427a496e82" absoluteBounds="3.75, 6.75, 2, 2.5401025390625023">
+      <DataClassMoniker Name="/StockDataContext/TempPriceList" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f2a9de3-0a03-4eec-9a16-60f3163dcf2a" absoluteBounds="3.7650000000000006, 7.2100000000000009, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ff721b62-ce2b-46d9-a309-9835ffeaa2c2" absoluteBounds="6.75, 5.75, 2, 1.1939925130208327">
+      <DataClassMoniker Name="/StockDataContext/TempStockListbyBranch" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2195e136-71fd-46f0-b1f8-eef75f068262" absoluteBounds="6.7650000000000006, 6.2100000000000009, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3141ae41-6baf-4786-b61b-aa30a5058aa2" absoluteBounds="6.75, 7.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/StockDataContext/Parameter" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f32daa0-82c5-47b7-8183-2e015ef240a7" absoluteBounds="6.7650000000000006, 8.21, 1.9700000000000002, 1.7878011067708333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ddd3627a-c200-4d13-9c96-24dde9a84a9b" absoluteBounds="9.75, 0.75, 2, 7.3476383463541666">
+      <DataClassMoniker Name="/StockDataContext/TempBranchFinanceList" />
+      <nestedChildShapes>
+        <elementListCompartment Id="52a5200e-1ed9-4dfc-ade9-136e12e29205" absoluteBounds="9.765, 1.2100000000000009, 1.9700000000000002, 6.7876383463541661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a691105a-3d4f-4803-b535-7a0079fcfcdf" absoluteBounds="9.75, 9.75, 2, 9.84755696614583">
+      <DataClassMoniker Name="/StockDataContext/TempStockFinanceList" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4e3b3f2a-f03e-4c10-a65c-43fd4daa4465" absoluteBounds="9.765, 10.21, 1.9700000000000002, 9.2875569661458321" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="889debb6-a678-4c5c-a3f9-0270def4389f" absoluteBounds="0.75, 11.75, 2, 9.84755696614583">
+      <DataClassMoniker Name="/StockDataContext/FinanceValue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bd8bdfb9-f69d-4a40-8f6b-162cbca5196b" absoluteBounds="0.76500000000000012, 12.21, 1.9700000000000002, 9.2875569661458321" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1dd7cad5-922b-45b1-b9b7-64d3a9f970af" absoluteBounds="0.75, 1.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/StockDataContext/Definition" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ea569006-dfcd-4899-97e1-7dc2475719c6" absoluteBounds="0.76499999999999968, 2.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="925b46e0-ddc9-4032-95d4-73b18b850dcc" absoluteBounds="12.75, 0.75, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/StockDataContext/ParameterValue" />
+      <nestedChildShapes>
+        <elementListCompartment Id="65cf6706-b205-483d-a6b8-7399036d8548" absoluteBounds="12.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e9e3e714-22b7-4ff9-a45b-5989cdaa709a" absoluteBounds="12.75, 3.75, 2, 1.3862939453125023">
+      <DataClassMoniker Name="/StockDataContext/ParameterGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3b40ce45-ec02-4fb2-b04b-bd1b334c5080" absoluteBounds="12.765, 4.2100000000000009, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fb0d54cc-77a4-4962-b1b2-7c3af7eabc2f" absoluteBounds="12.75, 6.75, 2, 1.3862939453124987">
+      <DataClassMoniker Name="/StockDataContext/ParameterDefault" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8499c27c-780f-4e49-b98f-427db73ca117" absoluteBounds="12.765, 7.2100000000000009, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5cd83034-d0fe-4dcf-81e4-b5da8e34e900" absoluteBounds="6.25, 2, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/StockDataContext/Price" />
+      <nestedChildShapes>
+        <elementListCompartment Id="090dbb9d-ff52-4dbe-aaf1-5e913cf5460f" absoluteBounds="6.2650000000000006, 2.46, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3ef0c5db-d033-45c2-8bcc-3ca18543ffae" absoluteBounds="12.75, 9.75, 2, 1.7708968098958309">
+      <DataClassMoniker Name="/StockDataContext/StockMonitor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8e7330b5-fe74-4934-8f56-dfb9c6f8dd73" absoluteBounds="12.765, 10.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="72f61163-74dc-4ddb-bd7f-351fce9e6c73" absoluteBounds="12.75, 12.75, 2, 2.3478011067708344">
+      <DataClassMoniker Name="/StockDataContext/vStockMonitor" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6c574692-74b3-4ac3-8b4a-5dcac5ab5aba" absoluteBounds="12.765, 13.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7a4bd781-f5da-412c-90d1-f5b121738b91" absoluteBounds="3.375, 10.75, 2, 10.232159830729167">
+      <DataClassMoniker Name="/StockDataContext/vStockFinance" />
+      <nestedChildShapes>
+        <elementListCompartment Id="995e4567-e1bc-44c8-9833-9db9403a904c" absoluteBounds="3.39, 11.21, 1.9700000000000002, 9.6721598307291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e7f03f5c-9a5f-4c10-b143-be4a1ca33100" absoluteBounds="18.625, 9.75, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/StockDataContext/vBranchFinance" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7791273a-8ddf-4a75-8ad4-e41eaa951f9a" absoluteBounds="18.64, 10.21, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8a1d9add-9dd3-40bf-942d-a2a3ae79e61b" absoluteBounds="6.375, 0.75, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/StockDataContext/Portfolio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7c67cc3e-faba-46fc-bed5-98d718d88a3a" absoluteBounds="6.39, 1.21, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="36edc0ef-23ff-400d-b2c7-89f2804b3d28" absoluteBounds="5.125, 5.625, 2, 2.5401025390625">
+      <DataClassMoniker Name="/StockDataContext/vPortfolio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="136e830d-24ba-4243-a379-9f5dfb4ace72" absoluteBounds="5.14, 6.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2971da31-afd4-493c-b89a-232e3051c3fd" absoluteBounds="6.125, 5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/StockDataContext/vStockInfo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="705e8692-96da-4746-80ba-7695fedfd454" absoluteBounds="6.14, 5.46, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b629cae5-54d7-4824-81b8-2faeb48c666b" absoluteBounds="4.125, 1.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/StockDataContext/StockHolder" />
+      <nestedChildShapes>
+        <elementListCompartment Id="170ccb10-599b-498a-a889-814d1683d91d" absoluteBounds="4.14, 1.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="50d7d6bc-557b-4856-b7a2-3f006ca66949" absoluteBounds="4.125, 0.875, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/StockDataContext/vStockHolder" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fe1ef024-c3ea-47c1-ade6-d7f2f73504b3" absoluteBounds="4.14, 1.335, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="acad9b58-9516-43ac-9a13-a4d42ff121cc" absoluteBounds="6.375, 11.75, 2, 4.6554182942708309">
+      <DataClassMoniker Name="/StockDataContext/Branch" />
+      <nestedChildShapes>
+        <elementListCompartment Id="210aefdb-5e73-40ef-8e15-9c420f3b4a2c" absoluteBounds="6.39, 12.21, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9a3bf0ad-2b0a-47ab-ad01-0e63f82fb0a0" absoluteBounds="3.5, 21.875, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/StockDataContext/Stock" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ef43e4c1-1465-41b9-bc07-57605ab5def8" absoluteBounds="3.515, 22.335, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.5 : 21.875); (4.5 : 21.78125); (8.8125 : 21.78125); (8.8125 : 3.75405060677083); (8.25 : 3.75405060677083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StockDataContext/Stock/Stock_Price" />
+      <nodes>
+        <classShapeMoniker Id="9a3bf0ad-2b0a-47ab-ad01-0e63f82fb0a0" />
+        <classShapeMoniker Id="5cd83034-d0fe-4dcf-81e4-b5da8e34e900" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 4.48240397135417); (1.75 : 11.5); (3 : 11.5); (3 : 24.1065584309896); (3.5 : 24.1065584309896)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StockDataContext/Definition/Definition_Stock" />
+      <nodes>
+        <classShapeMoniker Id="1dd7cad5-922b-45b1-b9b7-64d3a9f970af" />
+        <classShapeMoniker Id="9a3bf0ad-2b0a-47ab-ad01-0e63f82fb0a0" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="7b363cd6-1520-43b0-908b-3992c47d4160" absoluteBounds="4.5, 4, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/StockDataContext/vPrice" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d417b0bf-db6a-4788-8a85-05325bf20ec2" absoluteBounds="4.515, 4.46, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

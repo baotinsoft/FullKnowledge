@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F1B65924-C250-41A7-AA02-E9BE03A02908}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StockPredict</RootNamespace>
+    <AssemblyName>StockPredict</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/StockPredict/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AmiBroker.PlugInHost">
+      <HintPath>C:\Program Files (x86)\AmiBroker\.NET for AmiBroker\Assemblies\AmiBroker.PlugInHost.dll</HintPath>
+    </Reference>
+    <Reference Include="AmiBroker.Utils">
+      <HintPath>C:\Program Files (x86)\AmiBroker\.NET for AmiBroker\Assemblies\AmiBroker.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="InputControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\InputControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AnalysisServices, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.AnalysisServices.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AnalysisServices.AdomdClient, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.AnalysisServices.AdomdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.SqlServer.ConnectionInfo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.SqlServer.ConnectionInfo.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Smo, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Microsoft.SqlServer.Smo.dll</HintPath>
+    </Reference>
+    <Reference Include="msmgdsrv, Version=9.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=x86" />
+    <Reference Include="PagingGridControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\PagingGridControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="vjslib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\vjslib.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WindowFramework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ADOLib.cs" />
+    <Compile Include="ADOMDLib.cs" />
+    <Compile Include="AnalysisLib.cs" />
+    <Compile Include="CompressLib.cs" />
+    <Compile Include="DBContext\DBStock.cs" />
+    <Compile Include="frmConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfig.Designer.cs">
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCreateParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCreateParam.Designer.cs">
+      <DependentUpon>frmCreateParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInputBranchParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInputBranchParam.designer.cs">
+      <DependentUpon>frmInputBranchParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInputStockParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInputStockParam.Designer.cs">
+      <DependentUpon>frmInputStockParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStatConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStatConfig.Designer.cs">
+      <DependentUpon>frmStatConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmInputData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInputData.Designer.cs">
+      <DependentUpon>frmInputData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmModel.Designer.cs">
+      <DependentUpon>frmModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmExport2CSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmExport2CSV.Designer.cs">
+      <DependentUpon>frmExport2CSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmForecast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmForecast.designer.cs">
+      <DependentUpon>frmForecast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPriceHistory .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPriceHistory .Designer.cs">
+      <DependentUpon>frmPriceHistory .cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStockHolder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStockHolder.Designer.cs">
+      <DependentUpon>frmStockHolder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStockMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStockMonitor.Designer.cs">
+      <DependentUpon>frmStockMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdate.designer.cs">
+      <DependentUpon>frmUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewInfo_ChangePrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewInfo_ChangePrice.Designer.cs">
+      <DependentUpon>frmViewInfo_ChangePrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewInfo_Finance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewInfo_Finance.Designer.cs">
+      <DependentUpon>frmViewInfo_Finance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmViewInfo_Market.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmViewInfo_Market.Designer.cs">
+      <DependentUpon>frmViewInfo_Market.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General.cs" />
+    <Compile Include="GoolgeLib.cs" />
+    <Compile Include="ParseData.cs" />
+    <Compile Include="Portfolio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Portfolio.Designer.cs">
+      <DependentUpon>Portfolio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmConfig.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCreateParam.resx">
+      <DependentUpon>frmCreateParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmForecast.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmForecast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputBranchParam.resx">
+      <DependentUpon>frmInputBranchParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputData.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmInputData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInputStockParam.resx">
+      <DependentUpon>frmInputStockParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmModel.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmExport2CSV.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmExport2CSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStatConfig.resx">
+      <DependentUpon>frmStatConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPriceHistory .resx">
+      <DependentUpon>frmPriceHistory .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStockHolder.resx">
+      <DependentUpon>frmStockHolder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStockMonitor.resx">
+      <DependentUpon>frmStockMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdate.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewInfo_ChangePrice.resx">
+      <DependentUpon>frmViewInfo_ChangePrice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewInfo_Finance.resx">
+      <DependentUpon>frmViewInfo_Finance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmViewInfo_Market.resx">
+      <DependentUpon>frmViewInfo_Market.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Portfolio.resx">
+      <DependentUpon>Portfolio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="DBContext\Stock.dbml.layout">
+      <DependentUpon>Stock.dbml</DependentUpon>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DBContext\Stock.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Stock.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="DBContext\Stock.cs">
+      <DependentUpon>Stock.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DBContext\Stock.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Stock.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="WebLib.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

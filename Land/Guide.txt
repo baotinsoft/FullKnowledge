@@ -1,0 +1,4 @@
+Cap Nhat: update du lieu theo thay doi tu form
+Lay Du Lieu: lay cac trang du lieu tu web va luu vao db voi ngay tao theo ngay post len web
+Chi Tiet Tu Disk: parse du lieu chi tiet tu disk va luu du lieu vao db theo id
+Chi Tiet Tu Web: get data theo url trong db cua item va parse du lieu chi tiet theo web lay ve va luu du lieu vao db theo id

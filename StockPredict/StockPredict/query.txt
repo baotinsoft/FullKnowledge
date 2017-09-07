@@ -1,0 +1,23 @@
+/*Select T.[ID], T.CloseDate, NSC.[Close Price]
+From NSC Prediction Join
+OpenRowset('SQLOLEDB.1',
+'Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=StockPredict;Data Source=localhost','SELECT * FROM NSC') as T
+On NSC.[ID]= T.[ID]*/
+
+/*Select T.[ID], T.CloseDate, NSC.[Close Price]
+From NSC Prediction Join
+OPENQUERY(Stock, 'SELECT * FROM NSC') AS T
+On NSC.[ID]= T.[ID]*/
+
+//SELECT PredictTimeSeries([Close Price], 2) From NSC
+SELECT [Close Price] From NSC Where [ID]=130
+
+
+
+
+SELECT     ID, COUNT_ID, COMPLEXITY_PENALTY, AUTO_DETECT_PERIODICITY, HISTORIC_MODEL_GAP, TREND_COUNT, ga, h_s1, h_s2, h_s3, h_s4, h_s5, 
+                      h_s6, h_s7, h_s8, h_s9, h_s10, f_s1, f_s2, f_s3, f_s4, f_s5, f_s6, f_s7, f_s8, f_s9, f_s10, g1, g2, g3, g4, g5, g6, g7, g8, g9, g10
+FROM         CR_SAM
+ORDER BY TREND_COUNT DESC, ga
+
+SELECT flattened PredictTimeSeries([ClosePrice],-9, 1) From SAM

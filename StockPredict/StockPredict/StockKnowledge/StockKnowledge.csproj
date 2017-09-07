@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{6BFECFD5-E6FA-4030-A5AD-057B76CF7344}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StockKnowledge</RootNamespace>
+    <AssemblyName>StockKnowledge</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\WindowFramework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmBranchStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBranchStock.Designer.cs">
+      <DependentUpon>frmBranchStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDefinition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDefinition.Designer.cs">
+      <DependentUpon>frmDefinition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEvents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEvents.Designer.cs">
+      <DependentUpon>frmEvents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBContext\KnowledgeDB.cs">
+      <DependentUpon>KnowledgeDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Portfolio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Portfolio.Designer.cs">
+      <DependentUpon>Portfolio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNews.Designer.cs">
+      <DependentUpon>frmNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBContext\DBKnowledge.cs" />
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTerms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTerms.Designer.cs">
+      <DependentUpon>frmTerms.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General.cs" />
+    <Compile Include="DBContext\KnowledgeDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>KnowledgeDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebLib.cs" />
+    <EmbeddedResource Include="frmBranchStock.resx">
+      <DependentUpon>frmBranchStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDefinition.resx">
+      <DependentUpon>frmDefinition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEvents.resx">
+      <DependentUpon>frmEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Portfolio.resx">
+      <DependentUpon>Portfolio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNews.resx">
+      <DependentUpon>frmNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTerms.resx">
+      <DependentUpon>frmTerms.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="DBContext\KnowledgeDB.dbml.layout">
+      <DependentUpon>KnowledgeDB.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DBContext\KnowledgeDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>KnowledgeDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Forex" Class="HistoricalDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=serverxeon;Initial Catalog=Forex;User ID=sa" SettingsObjectName="GetHistoricalData.Properties.Settings" SettingsPropertyName="ForexConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.VAvgMonthGold" Member="VAvgMonthGolds">
+    <Type Name="VAvgMonthGold">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Month" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="USD" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="EUR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="JPY" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="GBP" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="CAD" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="CHF" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="INR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="CNY" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="TRY" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="SAR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="IDR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="AED" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="THB" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="VND" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="EGP" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="KRW" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="RUB" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="ZAR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="AUD" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="G5" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="PROD" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="CONS" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VAvgMonthYearGold" Member="VAvgMonthYearGolds">
+    <Type Name="VAvgMonthYearGold">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Month" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="USD" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="EUR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="JPY" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="GBP" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="CAD" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="CHF" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="INR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="CNY" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="TRY" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="SAR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="IDR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="AED" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="THB" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="VND" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="EGP" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="KRW" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="RUB" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="ZAR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="AUD" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="G5" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="PROD" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="CONS" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VAvgMonthYearSJC" Member="VAvgMonthYearSJCs">
+    <Type Name="VAvgMonthYearSJC">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Month" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AvgBuy" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="AvgSell" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Definition" Member="Definitions">
+    <Type Name="Definition">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CodeNum" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Definition" Member="Definition1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="GroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(1000)" CanBeNull="true" />
+      <Column Name="Bit" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Num1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Num2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EUR" Member="EURs">
+    <Type Name="EUR">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Buy" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Transfer" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Sell" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Forex" Member="Forexes">
+    <Type Name="Forex">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ItemId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PriceDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Buy" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Transfer" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Sell" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Gold" Member="Golds">
+    <Type Name="Gold">
+      <Column Name="PriceDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="USD" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="EUR" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="JPY" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="GBP" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="CAD" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="CHF" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="INR" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="CNY" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="TRY" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="SAR" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="IDR" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="AED" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="THB" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="VND" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="EGP" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="KRW" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="RUB" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="ZAR" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="AUD" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="G5_CCY" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="PROD_IDX" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="CONS_IDX" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SJCDetail" Member="SJCDetails">
+    <Type Name="SJCDetail">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ItemId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Buy" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Sell" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.SJC" Member="SJCs">
+    <Type Name="SJC">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Buy" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Sell" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.USD" Member="USDs">
+    <Type Name="USD">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PriceDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Buy" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Transfer" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Sell" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VAvgMonthSJC" Member="VAvgMonthSJCs">
+    <Type Name="VAvgMonthSJC">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Month" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AvgBuy" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="AvgSell" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.AvgMonth" Method="AvgMonth" IsComposable="true">
+    <Parameter Name="checkDate" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="AvgMonthResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Month" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AvgBuy" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="AvgSell" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AvgWeekDayGold" Method="AvgWeekDayGold" IsComposable="true">
+    <Parameter Name="checkDate" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="AvgWeekDayGoldResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="WeekDayNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WeekDay" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="USD" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="EUR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="JPY" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="GBP" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="CAD" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="CHF" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="INR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="CNY" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="TRY" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="SAR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="IDR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="AED" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="THB" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="VND" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="EGP" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="KRW" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="RUB" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="ZAR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="AUD" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="G5" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="PROD" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="CONS" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AvgMonthGold" Method="AvgMonthGold" IsComposable="true">
+    <Parameter Name="checkDate" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="AvgMonthGoldResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Month" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="USD" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="EUR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="JPY" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="GBP" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="CAD" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="CHF" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="INR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="CNY" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="TRY" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="SAR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="IDR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="AED" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="THB" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="VND" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="EGP" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="KRW" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="RUB" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="ZAR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="AUD" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="G5" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="PROD" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="CONS" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AvgMonthYear" Method="AvgMonthYear" IsComposable="true">
+    <Parameter Name="checkDate" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="AvgMonthYearResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Month" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AvgBuy" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="AvgSell" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AvgMonthYearGold" Method="AvgMonthYearGold" IsComposable="true">
+    <Parameter Name="checkDate" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="AvgMonthYearGoldResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Month" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="USD" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="EUR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="JPY" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="GBP" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="CAD" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="CHF" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="INR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="CNY" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="TRY" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="SAR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="IDR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="AED" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="THB" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="VND" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="EGP" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="KRW" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="RUB" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="ZAR" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="AUD" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="G5" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="PROD" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="CONS" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.AvgWeekDay" Method="AvgWeekDay" IsComposable="true">
+    <Parameter Name="checkDate" Type="System.DateTime" DbType="DateTime" />
+    <ElementType Name="AvgWeekDayResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="WeekDayNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WeekDay" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="AvgBuy" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+      <Column Name="AvgSell" Type="System.Decimal" DbType="Decimal(38,6)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

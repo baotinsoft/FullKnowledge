@@ -1,0 +1,20 @@
+1/ Live data download and push them into DB
+2/ ViewInfo:
+ 4 default views:
+  1: DurPerPrice
+  2: PerVolume
+  3: PerPrice
+  4: Avg
+	Desc,Asc
+ 1 custom view:
+  Top n: combobox
+  Field: combobox, which field to order
+  Desc, Asc: checkbox
+
+ =>10 views
+3/ Cal View:
+Stock from, to
+date from, date to
+4/ Input company data
+
+"ALTER TABLE "+tableName+" ADD "+colName+" real"

@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Stock" Class="KnowledgeDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=dbmoc;Initial Catalog=Stock;Persist Security Info=True;User ID=sa" SettingsObjectName="StockKnowledge.Properties.Settings" SettingsPropertyName="StockConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Definition" Member="Definitions">
+    <Type Name="Definition">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CodeNum" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Definition" Member="Definition1" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DefGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Bit" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="UserId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Num1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Num2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Definition_Stock" Member="Stocks" ThisKey="Id" OtherKey="MarketId" Type="Stock" />
+      <Association Name="DefinitionGroup_Definition" Member="DefinitionGroup" ThisKey="DefGroupId" OtherKey="Id" Type="DefinitionGroup" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DefinitionGroup" Member="DefinitionGroups">
+    <Type Name="DefinitionGroup">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DefGroup" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="First" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Last" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="DefinitionGroup_Definition" Member="Definitions" ThisKey="Id" OtherKey="DefGroupId" Type="Definition" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vDefinition" Member="vDefinitions">
+    <Type Name="vDefinition">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CodeNum" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Definition" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="DefGroup" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Bit" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Num1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Num2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DefGroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Event" Member="Events">
+    <Type Name="Event">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StockId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NoRightDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastRegisterDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ExecuteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Value" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MethodId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Stock_Event" Member="Stock" ThisKey="StockId" OtherKey="Id" Type="Stock" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Price" Member="Prices">
+    <Type Name="Price">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StockId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PriceDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OpenPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="HighPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="LowPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ClosePrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Volume" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Stock_Price" Member="Stock" ThisKey="StockId" OtherKey="Id" Type="Stock" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vEvent" Member="vEvents">
+    <Type Name="vEvent">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StockId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="NoRightDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LastRegisterDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ExecuteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(4000)" CanBeNull="true" />
+      <Column Name="Value" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MethodId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Method" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TypeName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Stock" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.News" Member="News">
+    <Type Name="New">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Detail" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PublishDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NewsTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsGood" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BranchId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StockId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Portfolio" Member="Portfolios">
+    <Type Name="Portfolio">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StockId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BuyPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="BuyRealPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SalePrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SaleRealPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="BuyRealDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SaleRealDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vPortfolio" Member="vPortfolios">
+    <Type Name="vPortfolio">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="StockId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="BuyPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="BuyRealPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SalePrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SaleRealPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="BuyRealDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SaleRealDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Stock" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Stock" Member="Stocks">
+    <Type Name="Stock">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Stock" Member="Stock1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="BranchId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MarketId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ChangeNumber" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ChangePercent" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="EPS" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ROA" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ROE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="BookValue" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PB" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Beta" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TotalStock" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ForeignStock" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ForeignPercent" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Capitalization" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="Stock_Event" Member="Events" ThisKey="Id" OtherKey="StockId" Type="Event" />
+      <Association Name="Stock_Price" Member="Prices" ThisKey="Id" OtherKey="StockId" Type="Price" />
+      <Association Name="Definition_Stock" Member="Definition" ThisKey="MarketId" OtherKey="Id" Type="Definition" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Branch" Member="Branches">
+    <Type Name="Branch">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="GroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Branch" Member="Branch1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="ChangeNumber" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ChangePercent" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="EPS" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ROA" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ROE" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="AvgPrice" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="BookValue" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PB" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Beta" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="TotalStock" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ForeignStock" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ForeignPercent" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Capitalization" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FiveBasicElementId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

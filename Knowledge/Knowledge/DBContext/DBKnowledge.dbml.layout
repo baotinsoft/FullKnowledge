@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.5, 11" name="DBKnowledge">
+  <DataContextMoniker Name="/DBKnowledgeDataContext" />
+  <nestedChildShapes>
+    <classShape Id="93cf00e3-4998-41e7-8a71-6d7a63fdcea6" absoluteBounds="3.125, 2.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DBKnowledgeDataContext/Author" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8f625f87-68b1-4608-8266-b0157b8ecb66" absoluteBounds="3.14, 2.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c004a6e7-e7b3-4762-ae8b-d7e0895d758e" absoluteBounds="1, 2.875, 2, 4.2708154296875">
+      <DataClassMoniker Name="/DBKnowledgeDataContext/vEbook" />
+      <nestedChildShapes>
+        <elementListCompartment Id="491c29d8-07af-4256-a621-e24a7fafaf8e" absoluteBounds="1.0150000000000001, 3.335, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2286d237-1d8c-4994-b472-9e4f64251710" absoluteBounds="1.25, 0.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DBKnowledgeDataContext/Definition" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a11df327-9262-4185-8ae6-73c16c8b25da" absoluteBounds="1.2650000000000001, 1.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="98ce9b5c-eb34-4233-b104-fc33501d901e" absoluteBounds="0.625, 1.125, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DBKnowledgeDataContext/DefinitionGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="bf838c10-1e4d-40b7-af87-33e0763c52d5" absoluteBounds="0.64, 1.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d4189e15-ad06-4529-b7c4-a2de4e889da0" absoluteBounds="5, 2.125, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/DBKnowledgeDataContext/KnowledgeManager" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ba2f16f1-2785-4f8b-866d-9d50fe9f6046" absoluteBounds="5.015, 2.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6e9c276d-2ff7-44ea-a8ee-735c3430d339" absoluteBounds="4.125, 0.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DBKnowledgeDataContext/Term" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ecc1b96e-5601-4e7d-af7c-43c0cf0f69f1" absoluteBounds="4.14, 0.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0383c9c9-69a5-4e9b-9bc9-9610cf6e86bb" absoluteBounds="0.75, 8.75, 2, 1.9631982421874987">
+      <DataClassMoniker Name="/DBKnowledgeDataContext/UrlDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5f40ea00-f597-4acf-879e-b9d08f441d77" absoluteBounds="0.765, 9.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1ed425b9-4b43-41eb-a734-3fa061441769" absoluteBounds="6.75, 4.875, 2, 3.8862125651041666">
+      <DataClassMoniker Name="/DBKnowledgeDataContext/Ebook" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7d9eeecb-c477-4a01-b411-d2a6c1da524f" absoluteBounds="6.765, 5.335, 1.9700000000000002, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9543acf2-d211-4199-837d-2ab495caaef7" absoluteBounds="12.25, 4.5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/DBKnowledgeDataContext/Url" />
+      <nestedChildShapes>
+        <elementListCompartment Id="75474da6-b5f9-4948-8f97-4f53836d09df" absoluteBounds="12.265, 4.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5b3554e4-b969-40b8-8a01-1e588a453bfe" absoluteBounds="4.75, 5.375, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DBKnowledgeDataContext/Rule" />
+      <nestedChildShapes>
+        <elementListCompartment Id="892f7343-b681-4855-90cb-f5a1fcf97761" absoluteBounds="4.765, 5.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="87f59908-1c78-45a7-894f-209b968284ee" absoluteBounds="8.625, 1.125, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DBKnowledgeDataContext/Knowledge" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f0e543c5-359d-4fec-8b33-141641570117" absoluteBounds="8.64, 1.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

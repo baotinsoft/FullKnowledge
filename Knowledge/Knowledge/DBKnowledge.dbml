@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Knowledge" Class="DBKnowledgeDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=localhost;Initial Catalog=Knowledge;User ID=sa" SettingsObjectName="Knowledge.Properties.Settings" SettingsPropertyName="KnowledgeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Author" Member="Authors">
+    <Type Name="Author">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Blog" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vEbooks" Member="vEbooks">
+    <Type Name="vEbook">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AuthorId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PublisherId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ISBN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Pages" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LanguageId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Size" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="FormatId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Path" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Publisher" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Language" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Format" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Type" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Definition" Member="Definitions">
+    <Type Name="Definition">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="GroupId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Num1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Num2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DefinitionGroup" Member="DefinitionGroups">
+    <Type Name="DefinitionGroup">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DefGroup" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="First" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Last" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KnowledgeManager" Member="KnowledgeManagers">
+    <Type Name="KnowledgeManager">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AccountId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="KnowledgeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StatusId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Page" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Chapter" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsBook" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Comment" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Term" Member="Terms">
+    <Type Name="Term">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Vn" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="En" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UrlDetail" Member="UrlDetails">
+    <Type Name="UrlDetail">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UrlId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SearchBegin" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="SearchEnd" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="FieldNum" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FieldOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ebooks" Member="Ebooks">
+    <Type Name="Ebook">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AuthorId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PublisherId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ISBN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Pages" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LanguageId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Size" Type="System.Decimal" DbType="Decimal(18,1)" CanBeNull="true" />
+      <Column Name="FormatId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Path" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="UrlDownload" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="HasFile" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Url" Member="Urls">
+    <Type Name="Url">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Url" Member="Url1" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="TypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ValueFrom" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ValueTo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AlphaFrom" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="AlphaTo" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="Loop" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Google" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Search" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Knowledge" Member="Knowledges">
+    <Type Name="Knowledge">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Url" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsFile" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

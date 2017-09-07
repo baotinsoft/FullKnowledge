@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 33.375, 25.875" name="DBLand">
+  <DataContextMoniker Name="/DBLandDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9187058b-1436-4fae-9779-b1938a3f16c9" absoluteBounds="3.75, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DBLandDataContext/StreetDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4bfbf2b7-ba83-413f-a834-4193773f7f23" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="067ebf11-4e5b-45a6-8c66-4ceac4f1d793" absoluteBounds="0.75, 6.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DBLandDataContext/Street" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5a801432-85e6-421b-bbce-23676f2e3d67" absoluteBounds="0.765, 7.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dd5275bd-f628-42e2-8a89-3c9226b167cf" isExpanded="false" absoluteBounds="7.75, 2.125, 2, 0.45">
+      <DataClassMoniker Name="/DBLandDataContext/VTax" />
+      <nestedChildShapes>
+        <elementListCompartment Id="21dfd7c5-c9c0-440a-a29f-75053a59cfdc" absoluteBounds="7.7650000000000006, 2.585, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="213e8d69-75b1-47e3-a7b8-fa8bd1698f90" absoluteBounds="7.375, 5.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DBLandDataContext/vDefinition" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3310f9be-10d6-4458-99a0-54957f548a1c" absoluteBounds="7.39, 5.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b23ab3d2-208d-4b4b-bf19-59239cae781f" isExpanded="false" absoluteBounds="6.625, 1.625, 2, 0.45">
+      <DataClassMoniker Name="/DBLandDataContext/Definition" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d0a0eb7c-fb9b-446c-829f-542ac84b0eb9" absoluteBounds="6.64, 2.085, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4848cc9d-7b48-4b56-8cf2-3eb8c93a191a" absoluteBounds="11.5, 1.375, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DBLandDataContext/DefinitionGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a75d7fac-f30a-4f33-b29f-cc0891ca3e3c" absoluteBounds="11.515, 1.835, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="422bfcc6-7688-455a-820d-7129dfaceb75" absoluteBounds="21, 11.625, 2, 6.7707340494791657">
+      <DataClassMoniker Name="/DBLandDataContext/Land" />
+      <nestedChildShapes>
+        <elementListCompartment Id="efad2159-8d7d-46b1-86f9-1b9fc43a127d" absoluteBounds="21.015, 12.085, 1.9700000000000002, 6.2107340494791661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b0cacf31-91b8-41d2-9893-4f7196860d02" absoluteBounds="31.125, 17.875, 2, 7.7322412109375005">
+      <DataClassMoniker Name="/DBLandDataContext/VLand" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d733a28a-a303-4505-ab34-a32dbb6120f8" absoluteBounds="31.14, 18.335, 1.9700000000000002, 7.1722412109375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

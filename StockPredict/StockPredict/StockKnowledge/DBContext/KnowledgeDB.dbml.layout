@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 17.5, 16.625" name="KnowledgeDB">
+  <DataContextMoniker Name="/KnowledgeDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="23730d72-1864-4ce7-928a-95d504b8aceb" absoluteBounds="0.75, 1.75, 2, 2.732403971354167">
+      <DataClassMoniker Name="/KnowledgeDBDataContext/Definition" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3ec49218-ff4b-4533-b7d7-4f41f6d9fbc4" absoluteBounds="0.765, 2.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="edcba129-758d-46b7-b320-ef6d203053ab" absoluteBounds="4.625, 1.5, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/KnowledgeDBDataContext/DefinitionGroup" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4c6b0c06-1c51-46c3-930a-c1945d05ed28" absoluteBounds="4.6400000000000006, 1.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.625 : 2.51044840494792); (4.11458333333333 : 2.51044840494792 : JumpStart); (3.94791666666667 : 2.51044840494792 : JumpEnd); (2.75 : 2.51044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KnowledgeDBDataContext/DefinitionGroup/DefinitionGroup_Definition" />
+      <nodes>
+        <classShapeMoniker Id="edcba129-758d-46b7-b320-ef6d203053ab" />
+        <classShapeMoniker Id="23730d72-1864-4ce7-928a-95d504b8aceb" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="28db7f43-6c44-480e-91e2-4c10273524b1" absoluteBounds="5.875, 4, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/KnowledgeDBDataContext/vDefinition" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e4316949-87d6-4ed5-8ddd-067980beac84" absoluteBounds="5.8900000000000006, 4.46, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6d7665cc-3a38-4501-ad15-6069e0e7aac8" absoluteBounds="9.75, 8, 2, 2.5401025390625">
+      <DataClassMoniker Name="/KnowledgeDBDataContext/Event" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b7a7a752-bd11-4f9f-b173-9d3d13a23df7" absoluteBounds="9.765, 8.46, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="23a89d48-d02d-44bd-9f0c-6e4c6cd2a040" absoluteBounds="7.375, 0.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/KnowledgeDBDataContext/Price" />
+      <nestedChildShapes>
+        <elementListCompartment Id="872ce7c7-e98d-4ad8-917d-88428cd65d85" absoluteBounds="7.39, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2db42ddc-f7e7-4f62-a2c9-968ac6c563ab" absoluteBounds="8.75, 7.625, 2, 3.3093082682291666">
+      <DataClassMoniker Name="/KnowledgeDBDataContext/vEvent" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5de25432-0510-45ca-9ab7-14172ba8d61e" absoluteBounds="8.765, 8.085, 1.9700000000000002, 2.7493082682291665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cb87fc9c-d2f9-4066-8e14-2f32867055bb" absoluteBounds="15.25, 5.75, 2, 2.5401025390625">
+      <DataClassMoniker Name="/KnowledgeDBDataContext/New" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5af958b3-e448-411a-8906-ef66f3491681" absoluteBounds="15.265, 6.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="bc27b9bc-5713-4fdc-ae51-9914f42ce46c" absoluteBounds="9.375, 3.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/KnowledgeDBDataContext/Portfolio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="403009e2-e02c-4a73-a532-4d8c679eec77" absoluteBounds="9.39, 3.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c9d9484c-4fbd-4219-8396-827e6f8bb1dc" absoluteBounds="7.25, 5.5, 2, 2.5401025390625">
+      <DataClassMoniker Name="/KnowledgeDBDataContext/vPortfolio" />
+      <nestedChildShapes>
+        <elementListCompartment Id="70211222-9df7-458f-a8dc-1873842640fb" absoluteBounds="7.265, 5.96, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ef8bbcc1-c3f6-49e6-bb52-760cc07b31d1" absoluteBounds="3.5, 7.875, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/KnowledgeDBDataContext/Stock" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4c1778bc-6df2-438a-a199-cc701fe2df4e" absoluteBounds="3.515, 8.335, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b0db79a4-2ae8-4497-b1e8-91275853e43f" absoluteBounds="6.375, 11.75, 2, 4.6554182942708309">
+      <DataClassMoniker Name="/KnowledgeDBDataContext/Branch" />
+      <nestedChildShapes>
+        <elementListCompartment Id="19c77aef-f963-4f22-8ad4-952c1dc13439" absoluteBounds="6.39, 12.21, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 11.3421541341146); (11.28125 : 11.3421541341146); (11.28125 : 10.5401025390625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KnowledgeDBDataContext/Stock/Stock_Event" />
+      <nodes>
+        <classShapeMoniker Id="ef8bbcc1-c3f6-49e6-bb52-760cc07b31d1" />
+        <classShapeMoniker Id="6d7665cc-3a38-4501-ad15-6069e0e7aac8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.03125 : 7.875); (4.03125 : 0.96875); (7.375 : 0.96875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KnowledgeDBDataContext/Stock/Stock_Price" />
+      <nodes>
+        <classShapeMoniker Id="ef8bbcc1-c3f6-49e6-bb52-760cc07b31d1" />
+        <classShapeMoniker Id="23a89d48-d02d-44bd-9f0c-6e4c6cd2a040" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 4.48240397135417); (1.75 : 10.1065584309896); (3.5 : 10.1065584309896)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/KnowledgeDBDataContext/Definition/Definition_Stock" />
+      <nodes>
+        <classShapeMoniker Id="23730d72-1864-4ce7-928a-95d504b8aceb" />
+        <classShapeMoniker Id="ef8bbcc1-c3f6-49e6-bb52-760cc07b31d1" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
